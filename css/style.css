@@ -809,3 +809,448 @@ section{
     animation:float 5s ease-in-out infinite;
 
 }
+/* ===========================================
+   PRICING
+=========================================== */
+
+.pricing{
+    background:var(--bg);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.price-card{
+
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:45px 35px;
+    text-align:center;
+    transition:var(--transition);
+    position:relative;
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-15px);
+    background:var(--card-hover);
+
+}
+
+.featured{
+
+    border:2px solid var(--primary);
+    transform:scale(1.05);
+
+}
+
+.popular{
+
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    padding:8px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.price-card h1{
+
+    font-size:55px;
+    color:var(--primary);
+    margin:20px 0;
+
+}
+
+.price-card span{
+
+    font-size:18px;
+    color:var(--paragraph);
+
+}
+
+.price-card ul{
+
+    margin:30px 0;
+    text-align:left;
+
+}
+
+.price-card li{
+
+    margin-bottom:18px;
+    color:var(--paragraph);
+
+}
+
+/* ===========================================
+   TESTIMONIALS
+=========================================== */
+
+.testimonials{
+
+    background:#0F172A;
+
+}
+
+.testimonial-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+.testimonial-card{
+
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:35px;
+    transition:var(--transition);
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.stars{
+
+    color:#FFD700;
+    margin-bottom:20px;
+    font-size:20px;
+
+}
+
+.customer{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+.customer img{
+
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+.customer span{
+
+    color:var(--paragraph);
+
+}
+
+/* ===========================================
+   FAQ
+=========================================== */
+
+.faq{
+
+    background:var(--bg);
+
+}
+
+.faq-container{
+
+    max-width:900px;
+    margin:auto;
+
+}
+
+.faq-item{
+
+    background:var(--card);
+    margin-bottom:20px;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid var(--border);
+
+}
+
+.faq-item h3{
+
+    margin-bottom:15px;
+
+}
+
+.faq-item p{
+
+    color:var(--paragraph);
+
+}
+
+/* ===========================================
+   CTA
+=========================================== */
+
+.cta{
+
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        rgba(99,102,241,.12),
+        rgba(139,92,246,.12)
+    );
+
+}
+
+.cta h2{
+
+    font-size:50px;
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    color:var(--paragraph);
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.footer{
+
+    background:#050816;
+    padding:80px 8% 30px;
+
+}
+
+.footer-container{
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+
+}
+
+.footer-logo p{
+
+    color:var(--paragraph);
+    margin-top:20px;
+
+}
+
+.footer-links{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.footer-links h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-links a{
+
+    color:var(--paragraph);
+    margin-bottom:12px;
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.footer hr{
+
+    margin:60px 0 25px;
+    border:none;
+    border-top:1px solid var(--border);
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+    color:var(--paragraph);
+
+}
+
+/* ===========================================
+   SCROLL TO TOP
+=========================================== */
+
+#scrollTop{
+
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:24px;
+    color:white;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    display:none;
+    transition:var(--transition);
+    z-index:999;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.hero,
+.about,
+.app-showcase{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.hero-right img,
+.about img,
+.showcase-right img{
+
+width:90%;
+margin:auto;
+
+}
+
+.hero-stats{
+
+flex-direction:column;
+
+}
+
+.feature-grid,
+.pricing-grid,
+.testimonial-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.company-logos{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-container{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.nav-buttons{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.about-content h2,
+.showcase-left h2,
+.cta h2{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+section{
+
+padding:80px 6%;
+
+}
+
+.hero{
+
+padding-top:140px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.company-logos{
+
+grid-template-columns:1fr;
+
+}
+
+.app-features{
+
+grid-template-columns:1fr;
+
+}
+
+}
